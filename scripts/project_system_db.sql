@@ -2,7 +2,11 @@
 -- Database: `project_system_db`
 --
 
+DROP DATABASE IF EXISTS project_system_db;
+
 CREATE DATABASE project_system_db;
+
+USE project_system_db;
 
 -- --------------------------------------------------------
 
@@ -89,19 +93,7 @@ CREATE TABLE users (
 --
 
 INSERT INTO users (id, username, first_name, last_name, email, password, role_id) VALUES
-(1, 'admin', 'admin', 'admin', 'admin@admin.com', '1234', 1),
-(2, 'john_smith', 'john', 'smith', 'smith@gmail.com', '1234', 2),
-(3, 'singh_komal', 'singh', 'komal', 'komalsingh@gmail.com', '1234', 2),
-(4, 'yad_singh', 'yad', 'singh', 'yad_singh@gmail.com', '1234', 2),
-(5, 'jatinder_singh', 'jatinder', 'singh', 'jatinder_singh@yahoo.in', '1234', 2),
-(6, 'Jagga_Singh', 'singh', 'Jagga', 'Jagga_Singh@live.in', '1234', 2),
-(7, 'Amrendra_Bahubali', 'Amrendra', 'Bahubali', 'Bahubali@gmail.com', '1234', 2),
-(8, 'Shivgami_Devi', 'Shivgami', 'devi', 'Shivgami_Devi@bahubali.in', '1234', 2),
-(9, 'Kutappa_singh', 'Kutappa', 'Singh', 'Kutappa_singh@yahoo.in', '1234', 2),
-(10, 'chemmasaab', 'Harman', 'Chemma', 'chemmasaab@gmail.com', '1234', 2),
-(11, 'Pooja', 'Pooja', 'Saini','Pooja@GMAIL.COM', '1234', 2),
-(12, 'LoveleenKaur', 'Loveleen', 'Kaur', 'LoveleenKaur@live.com', '1234', 2),
-(13, 'pawan_reru', 'reru', 'reru', 'rerupawan@gmail.com', '1234', 2);
+(1, 'admin', 'admin', 'admin', 'admin@admin.com', '1234', 1);
 
 -- --------------------------------------------------------
 
@@ -203,5 +195,4 @@ CREATE TABLE project_history (
       REFERENCES projects(id)
       ON UPDATE CASCADE ON DELETE RESTRICT
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
 
